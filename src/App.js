@@ -26,7 +26,7 @@ function App() {
     if (firstNumber === '0') {
       setFirstNumber(String(currentNumber))
       handleClearAll()  
-      setOperation('-')
+      setOperation("+")
     } else {
       const sum = Number(firstNumber) + Number(currentNumber)
       setCurrentNumber(String(sum))
@@ -38,7 +38,7 @@ function App() {
     if (firstNumber === '0') {
       setFirstNumber(String(currentNumber))
       handleClearAll()  
-      setOperation('-')
+      setOperation("-")
     } else {
       const sum = Number(firstNumber) - Number(currentNumber)
       setCurrentNumber(String(sum))
@@ -50,7 +50,7 @@ function App() {
     if (firstNumber === '0') {
       setFirstNumber(String(currentNumber))
       handleClearAll()  
-      setOperation('*')
+      setOperation("*")
     } else {
       const sum = Number(firstNumber) * Number(currentNumber)
       setCurrentNumber(String(sum))
@@ -62,7 +62,7 @@ function App() {
     if (firstNumber === '0') {
       setFirstNumber(String(currentNumber))
       handleClearAll()  
-      setOperation('/')
+      setOperation("/")
     } else {
       if (Number(currentNumber) !== '0') {
         const sum = Number(firstNumber) / Number(currentNumber)
@@ -76,19 +76,19 @@ function App() {
   const handleEquals = () => {
     if (firstNumber !== '0' && operation !== '' && currentNumber !== '0') {
       switch(operation) {
-        case '+': 
+        case "+": 
           handleSumNumbers()
         break
 
-        case '-': 
+        case "-": 
           handleMinusNumbers()
         break
 
-        case '*': 
+        case "*": 
           handleMultNumbers()
         break
 
-        case '/': 
+        case "/": 
           handleDivNumbers()
         break
         
